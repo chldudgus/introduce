@@ -1,0 +1,207 @@
+  /* Window 1 */
+  #window1 {
+    background-image : url('withlaptop.png');
+      background-repeat : no-repeat;
+    background-size: 250px 250px;
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    background-position: center bottom;
+    justify-content: center;
+  }
+  #intro {
+    position: absolute;
+    top: 50%;
+    height: 240px;
+    margin-top: -200px;
+  }
+  #intro h1 {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 600;
+    font-size: 72px;
+    text-align: center;
+  }
+  h3 {
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #555555;
+    text-align: center;
+  }
+  /* Window2 */
+  #window2 {
+    background: #FEAC5E;
+    background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+    background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  #profile {
+    max-width: 900px;
+    margin-left: 80px;
+    -webkit-flex: 1;
+    flex: 1
+  }
+  #myself {
+    -webkit-flex: 1;
+    flex: 1;
+    vertical-align: middle;
+  }
+  #myself h1 {
+    margin-top: 50%;
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+  }
+  #myself h2 {
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    text-align: center;
+  }
+  /* Window 3 */
+  #window3 {
+    background: #70e1f5;
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);
+    background: linear-gradient(to right, #ffd194, #70e1f5);
+  }
+  #window3 h1 {
+    padding-top: 120px;
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  .container {
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 150px;
+  }
+  .expect {
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .expect_img {
+    max-width: 300px;
+    display : inline;
+  }
+  .expect_text {
+    margin-top: 30px;
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+  /* Window 4 */
+  #window4 {
+    background: #eee;
+  }
+  #window4 h1 {
+    padding-top: 120px;
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  #window4 h1 span {
+    font-family: 'Palanquin Dark', sans-serif;
+    font-weight: 400;
+  }
+  .tmicontainer {
+    display: -webkit-flex;
+    display: flex;
+    margin-top: 130px;
+  }
+  .tmilist {
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+  .tmilist p {
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 25px;
+    line-height: 5.5;
+  }
+  .tmilist p:hover {
+    font-size: 0;
+  }
+  .tmilist p:hover::before {
+    font-size: 25px;
+    font-weight: bold;
+    color: #7319F3;
+  }
+  .tmilist #tmi1:hover:before {
+    content: '1998년 6월 17일';
+  }
+  .tmilist #tmi2:hover:before {
+    content: '움직이면서 할 수 있는 모든 일';
+  }
+  .tmilist #tmi3:hover:before {
+    content: '같은 영화 여러 번 보기';
+  }
+  .tmilist #tmi4:hover:before {
+    content: '싹 내려주는 아이스 🧋';
+  }
+  .tmilist #tmi5:hover:before {
+    content: 'Pizza Lover Club 🍕';
+  }
+  .tmilist #tmi6:hover:before {
+    content: '뭐든 맛있으면 👌';
+  }
+  .tmilist #tmi7:hover:before {
+    content: '탑 건: 매버릭';
+  }
+  .tmilist #tmi8:hover:before {
+    content: '김초엽 - 지구 밖의 온실';
+  }
+  .tmilist #tmi9:hover:before {
+    content: 'ESTP';
+  }
+  /* Window 5 */
+  #window5 {
+    background: #B993D6;
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);
+    background: linear-gradient(to right, #8CA6DB, #B993D6);
+  }
+  #window5 h1 {
+    padding-top: 140px;
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+  }
+  .imglist {
+    text-align: center;
+  }
+  .imglist img {
+    width: 100px;
+    margin-top: 140px;
+    padding: 50px;
+  }
+  .imglist a {
+    text-decoration: none;
+  }
