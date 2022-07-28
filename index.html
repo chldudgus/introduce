@@ -10,18 +10,20 @@
       b {display: inline-block; margin-left: 50px; margin-top: 20px; cursor: pointer;}
       div {width: 100vw; height: 100vh;}
     </style>
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" type="text/css" href="app.css">
     <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;600&family=Shrikhand&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <b id="btmain">MAIN</b>
-      <b id="bt01">1</b>
-      <b id="bt02">2</b>
-      <b id="bt03">3</b>
-      <b id="bt04">4</b>
+      <b id="bt01"><a href="#profile">1</a></b>
+      <b id="bt02"><a href="#eliceAItrack">2</a></b>
+      <b id="bt03"><a href="#tmi">3</a></b>
+      <b id="bt04"><a href="#contact">4</a></b>
+      <b id="bt05"><a href="#guestbook">GUEST BOOK</a></b>
     </header>
     <section>
+    <div class="scroll-container">
       <div id="window1">
         <div id="intro">
           <h1>Hello world,</br>I'm Yeonghyeon!</h1>
@@ -29,7 +31,7 @@
         </div>
       </div>
 
-      <div id="window2">
+      <div id="window2" class="profile">
         <img id="profile" src="profile.png" alt="">
         <div id="myself">
           <h1>개발자로서의 첫 걸음</h1>
@@ -37,7 +39,7 @@
         </div>
       </div>
 
-      <div id="window3">
+      <div id="window3" class="eliceAItrack">
         <h1>IN 엘리스 AI 트랙 🖥</h1>
         <div class="container">
           <div class="expect">
@@ -55,7 +57,7 @@
         </div>
       </div>
 
-      <div id="window4">
+      <div id="window4" class="tmi">
         <h1>More about me 📓</h1>
         <div class="tmicontainer">
           <div class="tmilist">
@@ -76,7 +78,7 @@
         </div>
       </div>
 
-      <div id="window5">
+      <div id="window5" class="contact">
         <h1>더 알아보고 싶으시다면? &#129303;</h1>
         <div class="imglist">
           <a href="mailto:chldudgus617@gmail.com">
@@ -89,6 +91,100 @@
             <img src="github.png" alt="">
           </a>
         </div>
+      </div>
+
+      <div id="window6" class="guestbook">
+        <script type="text/javascript">
+          var boardArray = new Array();
+
+          function Board(uName, uContent) {
+             this.userName=uName;
+             this.content=uContent;
+             this.writeDay=new Date();
+          }
+          
+          Board.prototype.userLocalString = function() {
+             return this.writeDay.getFullYear() + "-"
+                 + (this.writeDay.getMonth()+1) + "-"
+                 + this.writeDay.getDate() + "-"
+                 + this.writeDay.getHours() + ":"
+                 + this.writeDay.getSeconds();       
+          }
+       
+          function main() {
+             var uName = document.getElementById("uName").value;
+             var uContent = document.getElementById("uContent").value;
+             var len = boardArray.length;
+             boardArray[len] = new Board(uName, uContent);
+             print(len);
+             clear();
+          }
+
+          function print(idx) {
+             var tableNode = document.getElementById("bbsTable");
+             var trNode = document.createElement("tr");
+             
+             trNode.appendChild(createTdNode((idx+1).toString()));
+             trNode.appendChild(createTdNode(boardArray[idx].userName));
+             trNode.appendChild(createTdNode(boardArray[idx].content));
+             trNode.appendChild(createTdNode(boardArray[idx].userLocalString()));
+             
+             tableNode.appendChild(trNode);
+          }
+          
+          function createTdNode(val)
+          {
+             var textNode = document.createTextNode(val);
+             var tdNode = document.createElement("td");
+             tdNode.appendChild(textNode);
+             return tdNode;
+          }
+          
+          function clear()
+          {
+              document.getElementById("uName").value="";
+              document.getElementById("uContent").value="";
+              document.getElementById("uName").focus();
+          }
+       </script> 
+       
+       </head>
+       <body>
+       
+       <div>
+          <h1>방명록</h1>
+          <hr>
+          <div>
+             <form>
+                <table class="tbl">
+                   <tr>
+                      <th>작성자</th>
+                      <td>
+                         <input type="text" id="uName" style="width: 150px;">
+                      </td>
+                   </tr>
+                   <tr>
+                      <th>내용</th>
+                      <td>
+                         <input type="text" id="uContent" style="width: 560px;">
+                      </td>
+                   </tr>
+                </table>
+                
+                <br>
+                <input type="button" value="글쓰기" class="btn" style="width: 624px; height: 50px; font-size:18pt;" onclick="main()">
+                
+                <br><br>
+                <table class="tbl" id="bbsTable">
+                   <tr>
+                      <th>번호</th>
+                      <th>작성자</th>
+                      <th>내용</th>
+                      <th>작성일</th>
+                   </tr>
+                </table>
+             </form>
+      </div>
       </div>
     </section>
     <script type="text/javascript" src="app.js"></script>
