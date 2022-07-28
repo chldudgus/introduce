@@ -2,15 +2,25 @@
 #btmain {
   color: #bbbbbb;
 }
+#btmain:hover {
+  color: black;
+}
+
 b {
+  text-decoration-line: none;
   font-size: 20px;
   font-family: 'Palanquin Dark', sans-serif;
   font-weight: 600;
-  color: white;
+  color: #bbbbbb;
   padding: 5px;
 }
 b:hover {
   color: black;
+}
+
+/* 스크롤 */
+.scroll-container {
+  scroll-behavior: smooth;
 }
 
 /* Window 1 */
@@ -219,4 +229,19 @@ b:hover {
   }
   .imglist a {
     text-decoration: none;
+  }
+  /* Window 6 */
+  #window6 {
+    background: #B993D6;
+    background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);
+    background: linear-gradient(to right, #8CA6DB, #B993D6);
+  }
+  #window6 h1 {
+    padding-top: 140px;
+    font-family: "Apple SD Gothic Neo", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
   }
